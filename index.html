@@ -13,54 +13,96 @@
         *{
             box-sizing: border-box;
             margin: 0;
-            padding: 0;
-            background-color:var(--bg-color);
+            padding: 0%;
+            background-color: var(--bg-color);
             color: var(--primary-color);
         }
         :root {
             --bg-color:#0E1134;
             --primary-color:#FFFFFF;
-            --Secundary-color:#D7631D;
-            --Terciary-color:#35DDE1;
+            --secundary-color:#D7631D;
+            --terciary-color:#35DDE1;
         }
-        
         .lilitaone-cos {
-        font-family: "Lilita One", sans-serif;
-        font-weight: 400;
-        font-style: normal;
+            font-family: "Lilita One", sans-serif;
+            font-weight: 400;
+            font-style: normal;
         }
         .cal-sans-cos2 {
-        font-family: "Cal Sans", sans-serif;
-        font-weight: 400;
-        font-style: normal;
+            font-family: "Cal Sans", sans-serif;
+            font-weight: 400;
+            font-style: normal;
         }
-
-    
         body{
+            text-align: center;
+            padding: 5%;
         }
         header{
-            h2{
-                background-color: var(--Terciary-color);
+            h1{
+               font-size: 1000%; 
             }
-            text-align: center;
-            width: 250px;
-            height: 100px;
-            margin: 20px 100px 20px 100px;
+            h2{
+                display: inline-block;
+                background-color: var(--terciary-color);
+                font-size: 200%;
+                padding: 2% 4%;
+                margin: 0% 10% 2%;
+            }
+            time{
+                background-color: var(--terciary-color);
+            }
         }
         main{
             text-align: center;
-            /* Llevar puntets de la llista */
+            .lista-horizontal li:not(:last-child)::after {
+                content: "•";
+                margin: 0 12px;
+                font-size: 200%;
+                color: var(--terciary-color);
+            }
             ul li{
+                /* Llevar puntets de la llista */
                 list-style-type: none;
                 display: inline-block;
+                text-align: center;
+                font-size: 300%;
             } 
-            ul{ 
-            width: 250px;
-            height: 100px;
-            margin: 20px 100px 100px 100px;
+            h3{
+                padding: 1% 4%;
+                margin: 2% 10% 2%;
+                border-top: 3px solid var(--primary-color);
+                border-bottom: 3px solid var(--primary-color);
+                font-size: 250%;
+                margin: 5%;
             }
         }
         footer{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            h4{
+                display: flex;
+                flex-direction: column;
+                font-size: 200%;
+                background-color: transparent;
+            }
+            hgroup {
+                padding: 1%;
+                background-color: var(--terciary-color);
+                display: flex;
+                flex-direction: column;
+            }
+            .fondo-taronja{
+                padding: 2% 4%;
+                margin: 2% 10% 2%;
+                background-color: var(--secundary-color);
+            }
+            a{
+                background-color: var(--secundary-color);
+                color: var(--bg-color);
+            }
         }
 
     </style>
@@ -76,7 +118,7 @@
     </header>
     <main>
         <section class="lilitaone-cos">
-            <ul>
+            <ul class="lista-horizontal">
               <li>La Fúmiga</li>
               <li>Figa Flawas</li>
               <li>Auxili</li>
@@ -102,15 +144,14 @@
             </ul>
         </section>
         <h3 class="cal-sans-cos2">Tavernes de la Valldigna <time datetime="2025-12-29/2025-12-30/2025-12-31">29/30/31 Desembre</time></h3> 
-        
     </main>
-    <footer class="cal-sans-cos2">
+    <footer class="cal-sans-cos2" class="cabecera-lineal">
         <hgroup>
             <h4>Zona d'acampada</h4>
-            <h4>activitats</h4>
+            <h4>Activitats</h4>
         </hgroup>
-        <h4>Abonaments a la venta en <a href="https://www.codetickets.com/">www.codetickets.com</a></h4>
+        <h4 class="fondo-taronja">Abonaments a la venta en <a href="https://www.codetickets.com/">www.codetickets.com</a></h4>
     </footer>
-    <a href="https://www.tavernes.es/sites/www.tavernes.es/files/FESTIVERN%202025.jpg">Festivern</a>
+    <a class="cal-sans-cos2" href="https://www.tavernes.es/sites/www.tavernes.es/files/FESTIVERN%202025.jpg">Cartell Festivern</a>
 </body>
 </html>
