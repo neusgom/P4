@@ -13,15 +13,16 @@
         *{
             box-sizing: border-box;
             margin: 0;
-            padding: 0%;
-            background-color: var(--bg-color);
-            color: var(--primary-color);
+            padding: 0;
         }
+        /* Variables */
         :root {
             --bg-color:#0E1134;
             --primary-color:#FFFFFF;
             --secundary-color:#D7631D;
             --terciary-color:#35DDE1;
+
+        /* Tipografies */
         }
         .lilitaone-cos {
             font-family: "Lilita One", sans-serif;
@@ -33,77 +34,85 @@
             font-weight: 400;
             font-style: normal;
         }
+
         body{
             text-align: center;
-            padding: 5%;
+            font-size: 38px;
+            padding: 2em;
+            background-color: var(--bg-color);
+            color: var(--primary-color);
         }
-        header{
-            h1{
-               font-size: 1000%; 
-            }
-            h2{
-                display: inline-block;
-                background-color: var(--terciary-color);
-                font-size: 200%;
-                padding: 2% 4%;
-                margin: 0% 10% 2%;
-            }
-            time{
-                background-color: var(--terciary-color);
-            }
+        header h1{
+           font-size: 8em; 
+           margin-bottom: -.4em;
         }
-        main{
+        header h2{
+            display: inline-block;
+            background-color: var(--terciary-color);
+            font-size: 1em;
+            padding: .5em;
+            margin: 1em;
+        }
+        header time{
+            background-color: var(--terciary-color);
+        }
+        main {
             text-align: center;
-            .lista-horizontal li:not(:last-child)::after {
-                content: "•";
-                margin: 0 12px;
-                font-size: 200%;
-                color: var(--terciary-color);
-            }
-            ul li{
-                /* Llevar puntets de la llista */
-                list-style-type: none;
-                display: inline-block;
-                text-align: center;
-                font-size: 300%;
-            } 
-            h3{
-                padding: 1% 4%;
-                margin: 2% 10% 2%;
-                border-top: 3px solid var(--primary-color);
-                border-bottom: 3px solid var(--primary-color);
-                font-size: 250%;
-                margin: 5%;
-            }
         }
-        footer{
+        main ul li{
+            /* Llevar puntets de la llista */
+            list-style-type: none;
+            display: inline-block;
+            text-align: center;
+            font-size: 2em;
+        }
+        .lista-horizontal li:not(:last-child)::after {
+                content: "•";
+                margin: 0.3em;
+                font-size: 1em;
+                color: var(--terciary-color);
+        }
+        main h3{
+            padding: .4em;
+            margin: 1em;
+            border-top: 3px solid var(--primary-color);
+            border-bottom: 3px solid var(--primary-color);
+            font-size: 1em;
+        }
+        
+        footer {
             display: flex;
-            flex-direction: column;
+            flex-direction: inline;
             align-items: center;
             justify-content: center;
+            }
 
-            h4{
-                display: flex;
-                flex-direction: column;
-                font-size: 200%;
-                background-color: transparent;
-            }
-            hgroup {
-                padding: 1%;
-                background-color: var(--terciary-color);
-                display: flex;
-                flex-direction: column;
-            }
-            .fondo-taronja{
-                padding: 2% 4%;
-                margin: 2% 10% 2%;
-                background-color: var(--secundary-color);
-            }
-            a{
-                background-color: var(--secundary-color);
-                color: var(--bg-color);
-            }
+        footer h4{
+            font-weight: normal;
+            display: flex;
+            flex-direction: column;
+            font-size: 1em;
+            background-color: transparent;
         }
+        footer hgroup {
+            padding: 0.5em;
+            margin: 1em;
+            background-color: var(--terciary-color);
+        }
+        .fondo-taronja{
+            padding: 0.5em;
+            background-color: var(--secundary-color);
+        }
+        footer a{
+            background-color: var(--secundary-color);
+            color: var(--bg-color);
+            font-size: 1em;
+            }
+        a {
+            color: var(--primary-color);
+            font-size: .5em;
+        }
+
 
     </style>
 </head>
@@ -112,7 +121,7 @@
         <!-- hola :) -->
         <hgroup>
             <h1 class="lilitaone-cos">Festivern</h1>
-            <h2 class="cal-sans-cos2">Cap d'any aborigen <time datetime="2025-12-29/2026-01-01">2025-2026</time></h2>
+            <h2 class="cal-sans-cos2">Cap d'any aborigen <time datetime="2025-12-29/2026-01-01">2025 → 2026</time></h2>
         </hgroup>
         
     </header>
